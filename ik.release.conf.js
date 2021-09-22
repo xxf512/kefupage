@@ -15,7 +15,7 @@ const incUpdateConf = {
 
 const envMap = { // 环境变量配置
   test: {
-    destinationBranch: 'dev',
+    destinationBranch: 'feature/4.8.0',
     maxChangesLimit: 100,
     ...incUpdateConf,
   }
