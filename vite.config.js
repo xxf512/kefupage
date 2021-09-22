@@ -13,7 +13,7 @@ export default defineConfig({
     cssCodeSplit: false,
     rollupOptions: {
       input: {
-        default: '/src/pages/default/index.html',
+        setting: '/src/pages/setting/index.html',
         demo:'/src/pages/demo/index.html',
       }
     },
