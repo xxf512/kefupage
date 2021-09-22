@@ -39,6 +39,7 @@ const unOnlineTask = {
     // 重命名文件为php后缀
     fs.rename('dist/src/pages/setting/index.html', 'dist/src/pages/setting/setting.php', function(err) {
       if (err) {
+        console.log(err)
         console.log(chalk.red('文件重命名失败'))
         process.exit(1)
       } else {
