@@ -37,7 +37,7 @@ const unOnlineTask = {
   ...envConfig,
   onCopyStart() {
     // 重命名文件为php后缀
-    fs.rename('dist/src/pages/setting/index.html', 'dist/src/pages/setting/index.php', function(err) {
+    fs.rename('dist/src/pages/setting/index.html', 'dist/src/pages/setting/setting.php', function(err) {
       if (err) {
         console.log(chalk.red('文件重命名失败'))
         process.exit(1)
@@ -53,12 +53,12 @@ module.exports = {
   task: [
     unOnlineTask,
     {
-      source: 'dist/otherPageAssets', // 要copy的文件夹
+      source: 'dist', // 要copy的文件夹
       destinationFolder: '../kefu.inke.cn/web', // 目标文件夹
       destinationCwd: '../kefu.inke.cn', // 目标仓库位置
       destinationBranch: envConfig.destinationBranch, // 要提交的分支
       destinationRepo: 'git@code.inke.cn:opd/kefu/kefu.inke.cn.git', // 目标仓库地址
-      filter: [/^((?!(php|asset-manifest.json|favicon.ico)).)*$/],
+      filter: [/^((?!(php|asset-manifest.json|favicon.ico|html)).)*$/],
     }
   ].filter(Boolean)
 }
