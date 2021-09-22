@@ -1,0 +1,19 @@
+{
+  "name": "my-vue-app",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "release:test": "cross-env SCRIPT_ENV=test ik-release --config ik.release.conf"
+  },
+  "dependencies": {
+    "vue": "^3.2.13"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-legacy": "^1.5.3",
+    "@vitejs/plugin-vue": "^1.9.0",
+    "ik-release": "git+ssh://git@code.inke.cn:opd/fe-aws/modules/ik-release.git",
+    "vite": "^2.5.10"
+  }
+}
